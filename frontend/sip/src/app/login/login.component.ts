@@ -16,10 +16,10 @@ export class LoginComponent implements OnInit {
         private router: Router,
         ) { }
 
-    // ngOnInit() {
-    //     // reset login status
-    //     this.authenticationService.logout();
-    // }
+    ngOnInit() {
+        // reset login status
+        this.error =  "test";
+    }
 
     login() {
         this.loading = true;
