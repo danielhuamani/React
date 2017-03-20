@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'corsheaders',
+    'rest_framework.authtoken',
+    'apps.system'
 
 ]
 
@@ -57,9 +59,9 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated',
     ),
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework.authentication.SessionAuthentication',
         'rest_framework.authentication.BasicAuthentication',
-        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+
     ),
 }
 
@@ -141,7 +143,7 @@ STATICFILES_DIRS = (
 )
 CORS_ORIGIN_WHITELIST = (
 
-    'localhost:8100'
+    'localhost:4200'
 )
 
 
